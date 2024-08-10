@@ -1,0 +1,7 @@
+export * from './pagination'
+export * from './table-row'
+export * from './dialog-content-product-create'
+export * from './dialog-content-product-update'
+export * from './form-product'
+export * from './input'
+export * from './table-products'
