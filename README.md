@@ -5,6 +5,8 @@ O teste consiste no desenvolvimento de uma aplicação front-end, utilizando um 
 
 A documentação da API pode ser encontrada pelo endereço https://interview.t-alpha.com.br/reference
 
+DEPLOY: [t-alpha-challenge]
+
 ### 🛠 Tecnologias/Ferramentas utilizadas
 
 [react]
@@ -55,3 +57,4 @@ $ npm run dev
 [react-query]: https://tanstack.com/query/v3
 [axios]: https://axios-http.com/ptbr/
 [shadcn-ui]: https://ui.shadcn.com/
+[t-alpha-challenge]: https://t-alpha-challenge-jgm4mj5o6-matheusgcms-projects.vercel.app/
