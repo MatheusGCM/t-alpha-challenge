@@ -67,7 +67,7 @@ export function Home() {
           <Pagination
             onPageChange={handlePaginate}
             currentPage={currentPage}
-            perPage={5}
+            perPage={itemsPerPage}
             totalCount={products.length}
           />
         )}
