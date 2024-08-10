@@ -8,16 +8,7 @@ import { z } from 'zod'
 import { login } from '@/api/login'
 import { Input } from '@/components/input'
 import { Button } from '@/components/ui/button'
-
-const signInFormSchema = z.object({
-  taxNumber: z
-    .string()
-    .min(11, { message: 'CPF ou CNPJ inválido' })
-    .max(14, { message: 'CPF ou CNPJ inválido' }),
-  password: z
-    .string()
-    .min(6, { message: 'Senha inválida (mínimo 6 caracteres)' }),
-})
+import { signInFormSchema } from '@/validation/sign-in-form-schema'
 
 type SignInFormProps = z.infer<typeof signInFormSchema>
 

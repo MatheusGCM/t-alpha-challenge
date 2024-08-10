@@ -28,7 +28,7 @@ export function AppLayout() {
   }, [navigate])
 
   return (
-    <div className="mx-auto flex w-[56.25rem] flex-col items-center justify-center space-y-3">
+    <div className="mx-auto flex flex-col items-center space-y-3 md:w-[56.25rem]">
       <header className="mt-5 flex">
         <img src={logo} alt="logo" className="w-52" />
       </header>

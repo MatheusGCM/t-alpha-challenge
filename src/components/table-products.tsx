@@ -26,23 +26,25 @@ export function TableProducts({
       <Table>
         <TableHeader>
           <TR>
-            <TableHead className="hidden w-[8.25rem] md:table-cell">
+            <TableHead className="hidden md:table-cell md:w-[8.25rem]">
               Identificador
             </TableHead>
-            <TableHead className="w-[8.25rem]">Nome</TableHead>
-            <TableHead className="hidden w-[15rem] sm:table-cell">
+            <TableHead className="text-center md:w-[8.25rem] md:text-left">
+              Nome
+            </TableHead>
+            <TableHead className="hidden sm:table-cell md:w-[15rem]">
               Descrição
             </TableHead>
-            <TableHead className="hidden w-[8.25rem] sm:table-cell">
+            <TableHead className="hidden sm:table-cell md:w-[8.25rem]">
               <Button variant="ghost" onClick={handleOrderByPrice}>
                 <span>Preço</span>
                 <ArrowUpDown className="ml-2 inline h-4 w-4" />
               </Button>
             </TableHead>
-            <TableHead className="hidden w-[8.25rem] text-center sm:table-cell">
+            <TableHead className="hidden text-center sm:table-cell md:w-[8.25rem]">
               Estoque
             </TableHead>
-            <TableHead className="hidden w-[8.25rem] sm:table-cell"></TableHead>
+            <TableHead className="md:w-[8.25rem]"></TableHead>
           </TR>
         </TableHeader>
         <TableBody>

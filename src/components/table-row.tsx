@@ -32,7 +32,7 @@ export function TableRow(product: Product) {
       <TableCell className="hidden text-center sm:table-cell">
         {stock}
       </TableCell>
-      <TableCell className="hidden text-center sm:table-cell">
+      <TableCell className="text-center sm:table-cell">
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button size="xs" variant="ghost" type="button">

@@ -5,20 +5,9 @@ import { z } from 'zod'
 import { Input } from './input'
 
 import { Product } from '@/@types/product'
+import { productFormSchema } from '@/validation/product-form-schema'
 
-const productDialogFormSchema = z.object({
-  name: z
-    .string()
-    .min(3, { message: 'O nome deve conter pelo menos 3 caracteres' }),
-  description: z
-    .string()
-    .min(3, { message: 'A descrição deve conter pelo menos 3 caracteres' })
-    .max(100, { message: 'A descrição deve conter no máximo 100 caracteres' }),
-  price: z.coerce.number({ message: 'Valor inválido' }).nonnegative(),
-  stock: z.coerce.number({ message: 'Valor inválido' }).nonnegative(),
-})
-
-export type ProductDialogFormData = z.infer<typeof productDialogFormSchema>
+export type ProductDialogFormData = z.infer<typeof productFormSchema>
 
 interface FormProductProps {
   product?: Product
@@ -31,7 +20,7 @@ export function FormProduct({ product, onSubmit }: FormProductProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<ProductDialogFormData>({
-    resolver: zodResolver(productDialogFormSchema),
+    resolver: zodResolver(productFormSchema),
     defaultValues: {
       name: product?.name ?? '',
       description: product?.description ?? '',
